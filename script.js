@@ -75,3 +75,13 @@ const countFacebook = e => {
 };
 
 input.addEventListener('input', countFacebook);
+
+// Input validation
+const handleValidation = e => {
+  if (e.target.value.includes('<script>')) {
+    alert('Invalid Input');
+    e.target.value = e.target.value.replace('<script>', '');
+  }
+};
+
+input.addEventListener('input', handleValidation);
