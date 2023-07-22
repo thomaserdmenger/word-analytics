@@ -1,6 +1,7 @@
 // Get DOM elements
 const input = document.querySelector('.word__input');
 const words = document.querySelector('.number__words');
+const characters = document.querySelector('.number__characters');
 
 // Count words
 const countWords = e => {
@@ -15,3 +16,16 @@ const countWords = e => {
 };
 
 input.addEventListener('keyup', countWords);
+
+// Count characters
+const countCharacters = e => {
+  const inputString = e.target.value;
+
+  // Get the string's length
+  const inputLength = inputString.length;
+
+  // Display number of words to screen
+  characters.textContent = inputLength;
+};
+
+input.addEventListener('keyup', countCharacters);
