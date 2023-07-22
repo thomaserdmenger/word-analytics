@@ -17,7 +17,7 @@ const countWords = e => {
   words.textContent = inputWords;
 };
 
-input.addEventListener('keyup', countWords);
+input.addEventListener('input', countWords);
 
 // Count characters
 const countCharacters = e => {
@@ -30,7 +30,7 @@ const countCharacters = e => {
   characters.textContent = inputLength;
 };
 
-input.addEventListener('keyup', countCharacters);
+input.addEventListener('input', countCharacters);
 
 // Count Twitter
 const countTwitter = e => {
@@ -52,7 +52,7 @@ const countTwitter = e => {
   }
 };
 
-input.addEventListener('keyup', countTwitter);
+input.addEventListener('input', countTwitter);
 
 // Count Facebook
 const countFacebook = e => {
@@ -74,4 +74,4 @@ const countFacebook = e => {
   }
 };
 
-input.addEventListener('keyup', countFacebook);
+input.addEventListener('input', countFacebook);
