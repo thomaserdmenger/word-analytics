@@ -3,6 +3,7 @@ const input = document.querySelector('.word__input');
 const words = document.querySelector('.number__words');
 const characters = document.querySelector('.number__characters');
 const twitter = document.querySelector('.number__twitter');
+const facebook = document.querySelector('.number__facebook');
 
 // Count words
 const countWords = e => {
@@ -43,6 +44,7 @@ const countTwitter = e => {
   // Display decrementation to screen
   twitter.textContent = twitterCount;
 
+  // Warning if number < 0
   if (twitterCount < 0) {
     twitter.classList.add('word__warning');
   } else {
@@ -51,3 +53,25 @@ const countTwitter = e => {
 };
 
 input.addEventListener('keyup', countTwitter);
+
+// Count Facebook
+const countFacebook = e => {
+  const inputString = e.target.value;
+  const inputLength = inputString.length;
+  const facebookLength = 2200;
+
+  // Decrement facebook's number
+  const facebookCount = facebookLength - inputLength;
+
+  // Display decrementation to screen
+  facebook.textContent = facebookCount;
+
+  // Warning if number < 0
+  if (facebookCount < 0) {
+    facebook.classList.add('word__warning');
+  } else {
+    facebook.classList.remove('word__warning');
+  }
+};
+
+input.addEventListener('keyup', countFacebook);
