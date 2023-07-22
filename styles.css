@@ -91,6 +91,11 @@ body {
   line-height: 1.5;
 }
 
+/* Warning if number < 0 */
+.word__warning {
+  color: rgb(233, 75, 75);
+}
+
 @media only screen and (min-width: 1024px) {
   /* Container */
   .container__heading {
